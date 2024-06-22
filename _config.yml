@@ -5,3 +5,12 @@ color_scheme: dark
 
 url: https://ericgtkb.github.io/notes
 
+markdown: kramdown
+
+favicon_ico: /assets/images/logo.svg
+
+plugins:
+  - jekyll-scholar
+
+scholar:
+  style: apa

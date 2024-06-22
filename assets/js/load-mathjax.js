@@ -4,9 +4,19 @@ window.MathJax = {
   },
   tex: {
     packages: {'[+]': ['ams', 'physics', 'configmacros', 'boldsymbol']},
-    inlineMath: [['$', '$'], ['\\(', '\\)']],
-    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    inlineMath: [
+      ['$', '$'],
+      ['\\(', '\\)'],
+    ],
+    displayMath: [
+      ['$$', '$$'],
+      ['\\[', '\\]'],
+    ],
+    processEscapes: true,
     processRefs: true,
+    physics: {
+      italicdiff: true,  //  italic differential d
+    },
     macros: {
       frt: '(\\mathbf{r},t)',  // function of r, t
       fko: '(\\mathbf{k},\\omega)',  // function of k, omega
@@ -15,9 +25,9 @@ window.MathJax = {
       mb: ['\\mathbf{#1}', 1],  // vector Latin
       mbg: ['\\boldsymbol{#1}', 1],  // vector Greek
       ddfrac: ['\\frac{\\displaystyle #1}{\\displaystyle #2}', 2],  // displaystyle in both numerator and denominator
-      pd: ['\\frac{\\partial #1}{\\partial #2}', 2],  // partial derivative
-      pdtv: ['\\frac{\\partial^2 #1}{\\partial #2\\partial #3}', 3],  // 2nd order partial derivative with 2 variables
-      pdn: ['\\frac{\\partial^{#3} #1}{\\partial #2^{#3}}', 3],  // nth order partial derivative
+      ham: '\\mathcal{H}',  // Hamiltonian
+      lag: '\\mathcal{L}',  // Lagrangian
+      prob: '\\mathcal{P}',  // Prbability
     },
     tags: 'ams',  // Enable \label, \ref, \eqref
   },
