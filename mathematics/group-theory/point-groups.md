@@ -1,7 +1,7 @@
 ---
 layout: default_math
 title: Point Groups
-nav_order: 1
+nav_order: 5
 grand_parent: Mathematics
 parent: Group Theory
 ---

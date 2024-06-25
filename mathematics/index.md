@@ -8,6 +8,6 @@ has_toc: true
 
 # Mathematics
 
-The topics in mathematics covered here are by no means rigorous in the mathematical senese.
+The topics in mathematics covered here are by no means rigorous in the mathematical sense.
 These topics are covered to serve as prerequisites for physics and other tech topics.
 
