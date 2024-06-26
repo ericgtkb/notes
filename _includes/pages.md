@@ -1,66 +1,68 @@
-[Home]: /
-[home]: /
+[Home]: {% link index.md %}
+[home]: {% link index.md %}
 
-[Mathematics]: /mathematics
-[mathematics]: /mathematics
+[Mathematics]: {% link mathematics/index.md %}
+[mathematics]: {% link mathematics/index.md %}
 
-[Group theory]: /mathematics/group-theory
-[group theory]: /mathematics/group-theory
+[Group theory]: {% link mathematics/group-theory/index.md %}
+[group theory]: {% link mathematics/group-theory/index.md %}
 
-[Point groups]: /mathematics/group-theory/point-groups
-[point groups]: /mathematics/group-theory/point-groups
+[Point groups]: {% link mathematics/group-theory/point-groups.md %}
+[point groups]: {% link mathematics/group-theory/point-groups.md %}
 
-[Physics]: /physics
-[physics]: /physics
+[Physics]: {% link physics/index.md %}
+[physics]: {% link physics/index.md %}
 
-[Classical mechanics]: /physics/classical-mechanics
-[classical mechanics]: /physics/classical-mechanics
+[Classical mechanics]: {% link physics/classical-mechanics/index.md %}
+[classical mechanics]: {% link physics/classical-mechanics/index.md %}
 
-[Hamilton's equations]: /physics/classical-mechanics/hamiltons-equations
+[Hamilton's equations]: {% link physics/classical-mechanics/hamiltons-equations.md %}
 
-[Quantum mechanics]: /physics/quantum-mechanics
-[quantum mechanics]: /physics/quantum-mechanics
+[Quantum mechanics]: {% link physics/quantum-mechanics/index.md %}
+[quantum mechanics]: {% link physics/quantum-mechanics/index.md %}
 
-[Classical electrodynamics]: /physics/classical-electrodynamics
-[classical electrodynamics]: /physics/classical-electrodynamics
+[Classical electrodynamics]: {% link physics/classical-electrodynamics/index.md %}
+[classical electrodynamics]: {% link physics/classical-electrodynamics/index.md %}
 
-[Thermodynamics]: /physics/thermodynamics
-[thermodynamics]: /physics/thermodynamics
+[Thermodynamics]: {% link physics/thermodynamics/index.md %}
+[thermodynamics]: {% link physics/thermodynamics/index.md %}
 
-[Irreversible thermodynamics]: /physics/thermodynamics/irreversible-thermodynamics
-[irreversible thermodynamics]: /physics/thermodynamics/irreversible-thermodynamics
+[Irreversible thermodynamics]: {% link physics/thermodynamics/irreversible-thermodynamics.md %}
+[irreversible thermodynamics]: {% link physics/thermodynamics/irreversible-thermodynamics.md %}
 
-[Thermodynamic potentials]: /physics/thermodynamics/thermodynamic-potentials
-[thermodynamic potentials]: /physics/thermodynamics/thermodynamic-potentials
+[Thermodynamic potentials]: {% link physics/thermodynamics/thermodynamic-potentials.md %}
+[thermodynamic potentials]: {% link physics/thermodynamics/thermodynamic-potentials.md %}
 
-[Statistical mechanics]: /physics/statistical-mechanics
-[statistical mechanics]: /physics/statistical-mechanics
+[Statistical mechanics]: {% link physics/statistical-mechanics/index.md %}
+[statistical mechanics]: {% link physics/statistical-mechanics/index.md %}
 
-[Condensed matter physics]: /physics/condensed-matter-physics
-[condensed matter physics]: /physics/condensed-matter-physics
+[Condensed matter physics]: {% link physics/condensed-matter-physics/index.md %}
+[condensed matter physics]: {% link physics/condensed-matter-physics/index.md %}
 
-[Fluid mechanics]: /physics/fluid-mechanics
-[fluid mechanics]: /physics/fluid-mechanics
+[Fluid mechanics]: {% link physics/fluid-mechanics/index.md %}
+[fluid mechanics]: {% link physics/fluid-mechanics/index.md %}
 
-[Solid mechanics]: /physics/solid-mechanics
-[solid mechanics]: /physics/solid-mechanics
+[Solid mechanics]: {% link physics/solid-mechanics/index.md %}
+[solid mechanics]: {% link physics/solid-mechanics/index.md %}
 
-[Special relativity]: /physics/special-relativity
-[special relativity]: /physics/special-relativity
+[Special relativity]: {% link physics/special-relativity/index.md %}
+[special relativity]: {% link physics/special-relativity/index.md %}
 
-[General relativity]: /physics/general-relativity
-[general relativity]: /physics/general-relativity
+[General relativity]: {% link physics/general-relativity/index.md %}
+[general relativity]: {% link physics/general-relativity/index.md %}
 
-[Quantum field theory]: /physics/quantum-field-theory
-[quantum field theory]: /physics/quantum-field-theory
+[Quantum field theory]: {% link physics/quantum-field-theory/index.md %}
+[quantum field theory]: {% link physics/quantum-field-theory/index.md %}
 
-[Computer science]: /computer-science
-[computer science]: /computer-science
-[Quantum computation]: /computer-science/quantum-computation
-[quantum computation]: /computer-science/quantum-computation
-[Quantum information]: /computer-science/quantum-information
-[quantum information]: /computer-science/quantum-information
+[Computer science]: {% link computer-science/index.md %}
+[computer science]: {% link computer-science/index.md %}
 
-[Technology]: /technology
-[technology]: /technology
+[Quantum computation]: {% link computer-science/quantum-computation/index.md %}
+[quantum computation]: {% link computer-science/quantum-computation/index.md %}
+
+[Quantum information]: {% link computer-science/quantum-information/index.md %}
+[quantum information]: {% link computer-science/quantum-information/index.md %}
+
+[Technology]: {% link technology/index.md %}
+[technology]: {% link technology/index.md %}
 

@@ -4,7 +4,8 @@ description: Eric Chen's notes on things.
 theme: just-the-docs
 color_scheme: ec-light
 
-url: https://ericgtkb.github.io/notes
+url: https://ericgtkb.github.io
+baseurl: /notes
 
 markdown: kramdown
 

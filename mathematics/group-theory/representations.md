@@ -111,5 +111,5 @@ TBD
 </details>
 
 ---
-[Previous Page](/mathematics/group-theory/groups){: .btn }
+[Previous Page]({% link mathematics/group-theory/groups.md %}){: .btn }
 [Next Page](#){: .btn }

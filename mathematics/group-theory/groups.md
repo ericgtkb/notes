@@ -46,5 +46,5 @@ For counterclockwise rotation $\phi \gt 0$ and for clockwise rotation $\phi \lt 
 ## Important definitions
 
 ---
-[Previous Page](/mathematics/group-theory){: .btn }
-[Next Page](/mathematics/group-theory/representations){: .btn }
+[Previous Page]({% link mathematics/group-theory/index.md %}){: .btn }
+[Next Page]({% link mathematics/group-theory/representations.md %}){: .btn }

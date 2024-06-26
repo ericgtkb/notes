@@ -13,4 +13,4 @@ Groupy theory is the study of the abstract algebraic constructs called ***groups
 In physics, this is essentially the mathematics of symmetry.
 
 ---
-[Next Page](/mathematics/group-theory/groups){: .btn }
+[Next Page]({% link mathematics/group-theory/groups.md %}){: .btn }
