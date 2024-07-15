@@ -7,6 +7,8 @@ parent: Group Theory
 ---
 
 # Representations of Groups
+A general rotation operation can be denoted by $R(\phi)$ about a given axis.
+For counterclockwise rotation $\phi \gt 0$ and for clockwise rotation $\phi \lt 0$.
 
 
 ## Representation theory

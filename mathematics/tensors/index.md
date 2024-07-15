@@ -1,7 +1,7 @@
 ---
 layout: default_math
 title: Tensors
-nav_order: 2
+nav_order: 3
 parent: Mathematics
 has_children: true
 has_toc: true
@@ -9,7 +9,7 @@ has_toc: true
 
 # Tensors
 
-Due to the bloom of machine learn, especially deep learning, the term "tensor"
+Due to the bloom of machine learning, especially deep learning, the term "tensor"
 loosely means a multidimension array. However, in mathematics and physics,
 tensors are define through coordinate transformations and not all multidimensional
 arrays represents tensors.

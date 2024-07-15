@@ -1,11 +1,11 @@
 ---
 layout: default_math
-title: Probability
-nav_order: 6
+title: Differential Forms
+nav_order: 4
 parent: Mathematics
 has_children: true
 has_toc: true
 ---
 
-# Probability
+# Differential Forms
 

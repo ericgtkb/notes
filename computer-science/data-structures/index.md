@@ -1,11 +1,10 @@
 ---
 layout: default_math
-title: Quantum Information
-nav_order: 4
+title: Data Structures
+nav_order: 1
 parent: Computer Science
 has_children: true
 has_toc: true
 ---
 
-# Quantum Information
-
+# Data Structures

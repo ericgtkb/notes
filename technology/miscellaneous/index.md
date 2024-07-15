@@ -1,11 +1,11 @@
 ---
 layout: default_math
-title: Quantum Information
+title: Miscellaneous
 nav_order: 4
-parent: Computer Science
+parent: Technology
 has_children: true
 has_toc: true
 ---
 
-# Quantum Information
+# Miscellaneous Tools/Topics
 

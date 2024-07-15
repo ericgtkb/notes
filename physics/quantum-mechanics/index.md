@@ -9,3 +9,6 @@ has_toc: true
 
 # Quantum Mechanics
 
+---
+[Next Page]({% link physics/quantum-mechanics/basic-concepts.md %}){: .btn }
+
