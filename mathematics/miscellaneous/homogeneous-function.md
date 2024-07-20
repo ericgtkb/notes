@@ -8,10 +8,11 @@ parent: Miscellaneous
 
 # Homogeneous Functions
 
+## Definition
 If a function $f(x_i)$ satisfies the relation
 
 $$
-\begin{align}
+\begin{align}\label{eq:hf-def}
 f(\lambda x_i)=\lambda^n f(x_i),
 \end{align}
 $$
@@ -19,7 +20,32 @@ $$
 where $\lambda$ is any number and $n$ is a constant integer, then we say $f(x_i)$ is an
 $n$th order ***homogeneous function*** of variables $x_i$.
 
-Differentiating both sides with respect to $\lambda$ we find
+**Example.** $f(x, y, z) = ax + by + cz$.
+
+$$
+f(\lambda x, \lambda y, \lambda z) = \lambda (ax + by + cz) = \lambda f(x,y,z).
+$$
+
+$f$ is a homogeneous function of order $1$.
+
+**Example.** $f(x, y, z) = ax^2 + bxy + cy^2$.
+
+$$
+f(\lambda x, \lambda y, \lambda z) = \lambda^2 (ax^2 + bxy + cy^2) = \lambda^2 f(x,y,z).
+$$
+
+In general, quadratic forms are a homogeneous functions of order $2$.
+
+**Example.** $f(x, y, z) = ax + by^2 + cz^3$.
+
+$$
+f(\lambda x, \lambda y, \lambda z) = \lambda ax + \lambda^2 by^2 + \lambda^3 cz^3.
+$$
+
+$f$ is not a homogeneous function.
+
+## Euler's Theorem
+Differentiating both sides of \eqref{eq:hf-def} with respect to $\lambda$ we find
 
 $$
 \begin{align}

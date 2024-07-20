@@ -23,7 +23,12 @@ $$
 \end{align}
 $$
 
-and completeness relations\footnote{We use Landau's convention for the momentum eigenstates.}
+and completeness relations [^momentum]
+
+[^momentum]: Here we use Landau's normalization convention for the momentum eigenstates.
+    This choice of normalization is discussed in {% cite landau1981quantum %}
+    and {% cite stone2009mathematics %}. The integration over momentum has the
+    physical meaning of summation over all normal modes in this convention.
 
 $$
 \begin{align}\label{eq:comp-r}
@@ -121,12 +126,13 @@ $$
 $$
 
 Therefore, the position and momentum wave function form a Fourier transform
-pair
-\footnote{The choice of normalization of the momentum eigenstates makes the
-Fourier transform pair consistent with the Fourier transform convention used
-in \textit{Mathematics}.
-The wave function $\psi(\mb{r})$ in the position representation is
-a combination of plane waves of the form $e^{i\kr}$ ($\mb{p}=\hbar\mb{k}$).}.
+pair [^ft].
+
+[^ft]: The choice of normalization of the momentum eigenstates makes the
+    Fourier transform pair consistent with the Fourier transform convention used
+    in [Fourier transform]({% link mathematics/fourier/transforms.md %}).
+    The wave function $\psi(\mb{r})$ in the position representation is a
+    combination of plane waves of the form $e^{i\kr}$ ($\mb{p}=\hbar\mb{k}$).
 
 
 ## Harmonic Oscillator
@@ -307,5 +313,15 @@ $$
 ### Coherent states
 
 ---
+## Footnotes
+* Footnotes
+{:footnotes}
+---
+## References
+
+{% bibliography --cited %}
+---
 [Previous Page]({% link physics/quantum-mechanics/index.md %}){: .btn }
 [Next Page]({% link physics/quantum-mechanics/density-matrix.md %}){: .btn }
+
+{% include pages.md %}

@@ -7,6 +7,7 @@ parent: Classical Mechanics
 ---
 
 # Hamilton's Equations of Motion
+
 The Lagrangian $\lag$, is a a function of generalized coordinates $q_i$ and their
 time derivatives $\dot{q}_i$.
 
@@ -74,3 +75,73 @@ $$
 
 These equations are called Hamilton's equations of motions.
 
+## Poisson's Brackets
+If we have an arbitrary function $A(q_i,p_i,t)$ of coordinates, momenta,
+and time, the total time derivative is
+
+$$
+\begin{align}
+\frac{dA}{dt}=\pdv{A}{t}+\sum_i \left (\pdv{A}{q_i}\dot{q}_i+\pdv{A}{p_i}\dot{p}_i \right ).
+\end{align}
+$$
+
+Using the Hamilton equations it becomes
+
+$$
+\begin{align}\label{eq:DADt}
+\frac{dA}{dt}=\pdv{A}{t}+\sum_i \left (\pdv{A}{q_i}\pdv{\ham}{p_i}-\pdv{A}{p_i}\pdv{\ham}{q_i} \right ).
+\end{align}
+$$
+
+Introducing the Poisson bracket of quantities $A$ and $B$ as
+
+$$
+\begin{align}
+\qty{A,B }\equiv\sum_i \left (\pdv{A}{q_i}\pdv{B}{p_i}-\pdv{A}{p_i}\pdv{B}{q_i} \right ).
+\end{align}
+$$
+
+Eq. (\ref{eq:DADt}) can now be written as
+
+$$
+\begin{align}
+\frac{dA}{dt}=\pdv{A}{t}+\qty{A,\ham }.
+\end{align}
+$$
+
+The Hamilton equations of motion can now be written as
+
+$$
+\begin{align}
+\dot{q}_i=\qty{q_i,\ham },\\
+\dot{p}_i=\qty{p_i,\ham }.
+\end{align}
+$$
+
+In quantum mechanics an operator $\hat{A}$ in the Heisenberg picture follows
+the time evolution
+
+$$
+\begin{align}
+\frac{d\hat{A}}{dt}=\pdv{\hat{A}}{t}+\frac{1}{i\hbar}[\hat{A},\hat{\ham}],
+\end{align}
+$$
+
+
+where $[\hat{A},\hat{\ham}]=\hat{A}\hat{\ham}-\hat{\ham}\hat{A}$
+is the commutator of the operators. Thus, in passing from classical mechanics
+to quantum mechanics we have the following correspondence:
+
+$$
+\begin{align}
+ \qty{A,\ham }\rightarrow\frac{1}{i\hbar}[\hat{A},\hat{\ham}],
+\end{align}
+$$
+
+or more generally
+
+$$
+\begin{align}
+ \qty{A,B }\rightarrow\frac{1}{i\hbar}[\hat{A},\hat{B}].
+\end{align}
+$$
