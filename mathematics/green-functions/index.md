@@ -1,7 +1,7 @@
 ---
 layout: default_math
 title: Green Functions
-nav_order: 7
+nav_order: 6
 parent: Mathematics
 has_children: true
 has_toc: true

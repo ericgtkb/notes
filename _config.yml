@@ -8,6 +8,11 @@ url: https://notes.ericgtkb.com
 
 markdown: kramdown
 
+# Compressing html causes issues with code block with linenos
+compress_html:
+  ignore:
+    envs: all
+
 favicon_ico: /assets/images/logo.svg
 
 plugins:

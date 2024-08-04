@@ -28,6 +28,8 @@ $$
 
 $f$ is a homogeneous function of order $1$.
 
+<p style="text-align:right;">$\blacksquare$</p>
+
 **Example.** $f(x, y, z) = ax^2 + bxy + cy^2$.
 
 $$
@@ -36,6 +38,8 @@ $$
 
 In general, quadratic forms are a homogeneous functions of order $2$.
 
+<p style="text-align:right;">$\blacksquare$</p>
+
 **Example.** $f(x, y, z) = ax + by^2 + cz^3$.
 
 $$
@@ -43,6 +47,8 @@ f(\lambda x, \lambda y, \lambda z) = \lambda ax + \lambda^2 by^2 + \lambda^3 cz^
 $$
 
 $f$ is not a homogeneous function.
+
+<p style="text-align:right;">$\blacksquare$</p>
 
 ## Euler's Theorem
 Differentiating both sides of \eqref{eq:hf-def} with respect to $\lambda$ we find

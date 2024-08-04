@@ -68,7 +68,7 @@ $$
 $$
 
 We see that the angle $\zeta$ is a measure of velocity and it goes
-to infinity when $V\rightarrow c$. It is called the ***boost parameter***
+to infinity when $V\ra c$. It is called the ***boost parameter***
 or the ***rapidity***.
 
 From Eqs. \eqref{eq:hi-2} and Eqs. \eqref{eq:hi-3}, we obtain

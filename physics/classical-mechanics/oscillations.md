@@ -204,7 +204,7 @@ where $C'=C+\frac{F_0}{m(\omega_0^2-\omega^2)}$. Now we can use L'Hospital's
 rule to obtain the solution at resonance[^diverge]
 
 [^diverge]: Technically the first term now diverges since
-    $C'\rightarrow \infty$. However, this allows us to gain some physical
+    $C'\ra \infty$. However, this allows us to gain some physical
     found insights.
 
 $$
@@ -416,7 +416,7 @@ $$
 $$
 
 The homogeneous solution of the equation has been discussed in the previous
-section. In all cases, as $t\rightarrow\infty$ all terms in the homogeneous
+section. In all cases, as $t\ra\infty$ all terms in the homogeneous
 solution die out. We are thus only interested in the particular solution
 to the equation of motion. We will focus again on the case where
 

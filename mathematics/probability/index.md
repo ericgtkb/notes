@@ -1,7 +1,7 @@
 ---
 layout: default_math
 title: Probability
-nav_order: 6
+nav_order: 7
 parent: Mathematics
 has_children: true
 has_toc: true

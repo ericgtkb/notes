@@ -18,6 +18,14 @@ window.MathJax = {
       italicdiff: true,  //  italic differential d
     },
     macros: {
+      N: '\\mathbb{N}',  // natural numbers
+      Z: '\\mathbb{Z}',  // integers
+      R: '\\mathbb{R}',  // real numbers
+      C: '\\mathbb{C}',  // complex numbers
+      E: '\\mathbb{E}',  // Euclidean space
+      V: '\\mathbb{V}',  // vector space
+      e: '\\mathbf{e}',  // basis vector
+      ep: '\\boldsymbol{\\varepsilon}',  // basis 1-form
       frt: '(\\mathbf{r},t)',  // function of r, t
       fko: '(\\mathbf{k},\\omega)',  // function of k, omega
       kr: '\\mathbf{k}\\cdot\\mathbf{r}',  // k dot r
@@ -28,6 +36,13 @@ window.MathJax = {
       ham: '\\mathcal{H}',  // Hamiltonian
       lag: '\\mathcal{L}',  // Lagrangian
       prob: '\\mathcal{P}',  // Prbability
+      ua: '\\uparrow',  // up arrow
+      da: '\\downarrow',  // down arrow
+      la: '\\leftarrow',  // left arrow
+      ra: '\\rightarrow',  // right arrow
+      fa: '\\otimes',  // front arrow
+      ba: '\\odot',  // back arrow
+      lra: '\\leftrightarrow',  // left right arrow
     },
     tags: 'ams',  // Enable \label, \ref, \eqref
   },

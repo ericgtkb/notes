@@ -177,7 +177,9 @@ position eigenkets $\ket{\mb{r}}$. For the average of an observable $A$, we
 then have
 
 $$
-\ev{A} = \int\int d\mb{r} d\mb{r}' \mel{\mb{r}'}{\rho}{\mb{r}} \mel{\mb{r}}{A}{\mb{r}'}.
+\begin{align}\label{eq:a-ev-rho-r}
+\ev{A} = \iint d\mb{r} d\mb{r}' \mel{\mb{r}'}{\rho}{\mb{r}} \mel{\mb{r}}{A}{\mb{r}'}.
+\end{align}
 $$
 
 In this basis, the density matrix is
@@ -195,7 +197,7 @@ If the operator $A$ is $\mb{r}$ the expectation value of $r$ is
 
 $$
 \begin{align}
-\ev{\mb{r}} &= \int\int d\mb{r} d\mb{r}' \mel{\mb{r}'}{\rho}{\mb{r}} \mb{r}\delta(\mb{r} - \mb{r}') \notag \\
+\ev{\mb{r}} &= \iint d\mb{r} d\mb{r}' \mel{\mb{r}'}{\rho}{\mb{r}} \mb{r}\delta(\mb{r} - \mb{r}') \notag \\
     &= \int d\mb{r} \mb{r} \rho(\mb{r}, \mb{r}).
 \end{align}
 $$
@@ -204,7 +206,7 @@ For momentum $\mb{p}$, we have
 
 $$
 \begin{align}
-\ev{\mb{p}} &= \int\int d\mb{r} d\mb{r}' \mel{\mb{r}'}{\rho}{\mb{r}}\qty(-i\hbar\pdv{\mb{r}}\delta(\mb{r} - \mb{r}')) \notag \\
+\ev{\mb{p}} &= \iint d\mb{r} d\mb{r}' \mel{\mb{r}'}{\rho}{\mb{r}}\qty(-i\hbar\pdv{\mb{r}}\delta(\mb{r} - \mb{r}')) \notag \\
     &= i\hbar\int d\mb{r}' \qty[\pdv{\mb{r}} \rho(\mb{r}', \mb{r})]_{\mb{r} = \mb{r}'},
 \end{align}
 $$
@@ -220,7 +222,7 @@ an operator $A$ is[^h-factor]
     where $N$ is the number of particles.
 
 $$
-\ev{A} = \frac{1}{(2\pi\hbar)^6}\int\int d\mb{p} d\mb{p}' \mel{\mb{p}'}{\rho}{\mb{p}} \mel{\mb{p}}{A}{\mb{p}'},
+\ev{A} = \frac{1}{(2\pi\hbar)^6}\iint d\mb{p} d\mb{p}' \mel{\mb{p}'}{\rho}{\mb{p}} \mel{\mb{p}}{A}{\mb{p}'},
 $$
 
 
@@ -237,7 +239,7 @@ The expectation value for position can be calculated through
 
 $$
 \begin{align}
-\ev{\mb{r}} &= \frac{1}{(2\pi\hbar)^3} \int\int d\mb{p} d\mb{p}' \mel{\mb{p}'}{\rho}{\mb{p}}\qty(i\hbar\pdv{\mb{p}}\delta(\mb{p} - \mb{p}')) \notag \\
+\ev{\mb{r}} &= \frac{1}{(2\pi\hbar)^3} \iint d\mb{p} d\mb{p}' \mel{\mb{p}'}{\rho}{\mb{p}}\qty(i\hbar\pdv{\mb{p}}\delta(\mb{p} - \mb{p}')) \notag \\
     &= -\frac{i\hbar}{(2\pi\hbar)^3} \int d\mb{p}' \qty[\pdv{\mb{p}} \rho(\mb{p}', \mb{p})]_{\mb{p} = \mb{p}'},
 \end{align}
 $$
@@ -246,7 +248,7 @@ and for momentum
 
 $$
 \begin{align}
-\ev{\mb{p}} &= \frac{1}{(2\pi\hbar)^3} \int\int d\mb{p} d\mb{p}' \mel{\mb{p}'}{\rho}{\mb{p}} \mb{p}\delta(\mb{p} - \mb{p}') \notag \\
+\ev{\mb{p}} &= \frac{1}{(2\pi\hbar)^3} \iint d\mb{p} d\mb{p}' \mel{\mb{p}'}{\rho}{\mb{p}} \mb{p}\delta(\mb{p} - \mb{p}') \notag \\
     &= \frac{1}{(2\pi\hbar)^3} \int d\mb{p} \mb{p} \rho(\mb{p}, \mb{p}).
 \end{align}
 $$
@@ -259,7 +261,7 @@ calculations.
 **Example 1.** A pure state
 
 $$
-\rho = \dyad{\uparrow} \doteq \mqty(1&0\\0&0).
+\rho = \dyad{\ua} \doteq \mqty(1&0\\0&0).
 $$
 
 This is a pure state and we have $\tr\qty(\rho^2) = \tr\rho = 1$. We can
@@ -269,10 +271,12 @@ $$
 \ev{\sigma_z} = \tr\qty(\rho \sigma_z) = \tr\qty[\mqty(1&0\\0&0)\mqty(\pmat{z})] = 1.
 $$
 
+<p style="text-align:right;">$\blacksquare$</p>
+
 **Example 2.** A mixed state
 
 $$
-\rho = \frac{1}{4}\dyad{\uparrow} + \frac{3}{4}\dyad{\downarrow} \doteq
+\rho = \frac{1}{4}\dyad{\ua} + \frac{3}{4}\dyad{\da} \doteq
     \mqty(\frac{1}{4}&0\\0&\frac{3}{4}).
 $$
 
@@ -285,20 +289,22 @@ $$
     = \frac{1}{4} - \frac{3}{4} = -\frac{1}{2}.
 $$
 
+<p style="text-align:right;">$\blacksquare$</p>
+
 **Example 3.** A mixed state, but the states are not orthogonal
 
 $$
-\rho = \frac{1}{2}\dyad{\rightarrow} + \frac{1}{2}\dyad{\uparrow},
+\rho = \frac{1}{2}\dyad{\ra} + \frac{1}{2}\dyad{\ua},
 $$
 
-where $\ket{\rightarrow}$ is an eigenket of $\sigma_x$. Writing
-$\ket{\rightarrow}$ in the $\sigma_z$ basis we have
+where $\ket{\ra}$ is an eigenket of $\sigma_x$. Writing
+$\ket{\ra}$ in the $\sigma_z$ basis we have
 
 $$
 \begin{align*}
-\rho &= \frac{1}{4}\qty(\ket{\uparrow} + \ket{\downarrow})\qty(\bra{\uparrow} + \bra{\downarrow}) + \frac{1}{2}\dyad{\uparrow} \\
-    &= \frac{1}{4}\qty(\dyad{\uparrow}{\uparrow} + \dyad{\uparrow}{\downarrow} + \dyad{\downarrow}{\uparrow} + \dyad{\downarrow}{\downarrow})+ \frac{1}{2}\dyad{\uparrow} \\
-    &= \frac{3}{4}\dyad{\uparrow}{\uparrow} + \frac{1}{4}\dyad{\uparrow}{\downarrow} + \frac{1}{4}\dyad{\downarrow}{\uparrow} + \frac{1}{4}\dyad{\downarrow}{\downarrow} \\
+\rho &= \frac{1}{4}\qty(\ket{\ua} + \ket{\da})\qty(\bra{\ua} + \bra{\da}) + \frac{1}{2}\dyad{\ua} \\
+    &= \frac{1}{4}\qty(\dyad{\ua}{\ua} + \dyad{\ua}{\da} + \dyad{\da}{\ua} + \dyad{\da}{\da})+ \frac{1}{2}\dyad{\ua} \\
+    &= \frac{3}{4}\dyad{\ua}{\ua} + \frac{1}{4}\dyad{\ua}{\da} + \frac{1}{4}\dyad{\da}{\ua} + \frac{1}{4}\dyad{\da}{\da} \\
     &\doteq \mqty(\frac{3}{4}&\frac{1}{4}\\ \frac{1}{4}&\frac{1}{4}).
 \end{align*}
 $$
@@ -323,7 +329,7 @@ $$
 \end{align*}
 $$
 
-and the expectation value for $sigma_x$ is
+and the expectation value for $\sigma_x$ is
 
 $$
 \begin{align*}
@@ -334,8 +340,10 @@ $$
 $$
 
 These results are expected as the expectation value of $\sigma_z$ for a system
-in the state $\ket{\rightarrow}$ is zero, same for the expectation value of
-$\sigma_x$ for a state in $\ket{\uparrow}$.
+in the state $\ket{\ra}$ is zero, same for the expectation value of
+$\sigma_x$ for a state in $\ket{\ua}$.
+<span style="float:right;">$\blacksquare$</span>
+
 
 ## Time evolution
 The time dependent density operator is given by
@@ -358,10 +366,10 @@ $$
 where we have used the fact that the states $\ket{\psi_i(t)}$ satisfy the
 Schrödinger equation.
 
-Let's move the factor $i\hbar$ to the right hand side
+Let's rearrange the equation to write
 $$
 \begin{align}\label{eq:do-te}
-\pdv{\rho}{t} &= \frac{1}{i\hbar}[\ham, \rho].
+\pdv{\rho}{t} + \frac{1}{i\hbar}[\rho, \ham] = 0.
 \end{align}
 $$
 
@@ -369,14 +377,14 @@ We have seen that the connection between classical mechanics and quantum mechani
 can be done by replacing the classical Poisson brackets by the commutators:
 
 $$
-\qty{A, B} \rightarrow \frac{1}{i\hbar}[A, B].
+\qty{A, B} \ra \frac{1}{i\hbar}[A, B].
 $$
 
 From \eqref{eq:do-te} we can see that the corresponding classical equation is
 
 $$
 \begin{align}
-\pdv{\rho}{t} &= \qty{\ham, \rho}.
+\pdv{\rho}{t} + \qty{\rho, \ham} = 0.
 \end{align}
 $$
 
@@ -400,7 +408,7 @@ The Wigner representation of the density matrix is[^wdf-def]
     may differ from our definition here by a factor of $2\pi\hbar$. This
     is because the way we normalize our momentum eigenkets. Whenever we
     have an integral over momentum we always include this factor
-    $\int dp \rightarrow \int \frac{dp}{2\pi\hbar}$.
+    $\int dp \ra \int \frac{dp}{2\pi\hbar}$.
 
 $$
 \begin{align}
@@ -423,7 +431,7 @@ The integral of the Wigner distribution function over momentum is
 
 $$
 \begin{align}
-\int \frac{d\mb{p}}{(2\pi\hbar)^3}\rho_W(\mb{r}, \mb{p}) &= \int\int \frac{d\mb{r}' d\mb{p}}{(2\pi\hbar)^3}
+\int \frac{d\mb{p}}{(2\pi\hbar)^3}\rho_W(\mb{r}, \mb{p}) &= \iint \frac{d\mb{r}' d\mb{p}}{(2\pi\hbar)^3}
     e^{i\mb{p}\cdot\mb{r}'/\hbar}\mel{\mb{r}-\frac{\mb{r}'}{2}}{\rho}{\mb{r}+\frac{\mb{r}'}{2}} \notag \\
     &= \int d\mb{r}' \delta(\mb{r}')\mel{\mb{r}-\frac{\mb{r}'}{2}}{\rho}{\mb{r}+\frac{\mb{r}'}{2}} \notag \\
     &= \mel{\mb{r}}{\rho}{\mb{r}} = \rho(\mb{r},\mb{r}),
@@ -437,7 +445,7 @@ From this we find the normalization condition for Wigner distribution is
 
 $$
 \begin{align}
-\int \int \frac{d\mb{r}d\mb{p}}{(2\pi\hbar)^3}\rho_W(\mb{r}, \mb{p})
+\iint \frac{d\mb{r}d\mb{p}}{(2\pi\hbar)^3}\rho_W(\mb{r}, \mb{p})
     &= \int d\mb{r} \rho(\mb{r},\mb{r}) = 1,
 \end{align}
 $$
@@ -447,19 +455,19 @@ from \eqref{eq:wdf-def-r} and inserting completeness relation twice
 
 $$
 \begin{align*}
-\rho_W(\mb{r}, \mb{p}) &= \frac{1}{(2\pi\hbar)^6}\int\int\int d\mb{r}' d\mb{p}' d\mb{p}''
+\rho_W(\mb{r}, \mb{p}) &= \frac{1}{(2\pi\hbar)^6}\iiint d\mb{r}' d\mb{p}' d\mb{p}''
     e^{i\mb{p}\cdot\mb{r}'/\hbar}\braket{\mb{r}-\frac{\mb{r}'}{2}}{\mb{p}'}\mel{\mb{p}'}{\rho}{\mb{p}''}
     \braket{\mb{p}''}{\mb{r}+\frac{\mb{r}'}{2}} \\
-    &= \frac{1}{(2\pi\hbar)^6}\int\int\int d\mb{r}' d\mb{p}' d\mb{p}''
+    &= \frac{1}{(2\pi\hbar)^6}\iiint d\mb{r}' d\mb{p}' d\mb{p}''
     e^{i\mb{p}\cdot\mb{r}'/\hbar} e^{i\mb{p}'\cdot(\mb{r} - \frac{\mb{r}'}{2})/\hbar}
     e^{-i\mb{p}''\cdot(\mb{r}+\frac{\mb{r}'}{2})/\hbar} \mel{\mb{p}'}{\rho}{\mb{p}''} \\
-    &= \frac{1}{(2\pi\hbar)^6}\int\int\int d\mb{r}' d\mb{p}' d\mb{p}''
+    &= \frac{1}{(2\pi\hbar)^6}\iiint d\mb{r}' d\mb{p}' d\mb{p}''
     e^{i(\mb{p} - \frac{\mb{p}'}{2} - \frac{\mb{p}''}{2})\cdot\mb{r}'/\hbar}
     e^{i(\mb{p}' - \mb{p}'')\cdot\mb{r}/\hbar} \mel{\mb{p}'}{\rho}{\mb{p}''} \\
-    &= \frac{1}{(2\pi\hbar)^3}\int\int d\mb{p}' d\mb{p}''
+    &= \frac{1}{(2\pi\hbar)^3}\iint d\mb{p}' d\mb{p}''
     \delta(\mb{p} - \frac{\mb{p}'}{2} - \frac{\mb{p}''}{2})
     e^{i(\mb{p}' - \mb{p}'')\cdot\mb{r}/\hbar} \mel{\mb{p}'}{\rho}{\mb{p}''} \\
-    &= \frac{1}{(2\pi\hbar)^3}\int\int d\mb{p}' d\mb{p}''
+    &= \frac{1}{(2\pi\hbar)^3}\iint d\mb{p}' d\mb{p}''
     2^3 \delta(2\mb{p} - \mb{p}' - \mb{p}'')
     e^{i(\mb{p}' - \mb{p}'')\cdot\mb{r}/\hbar} \mel{\mb{p}'}{\rho}{\mb{p}''} \\
     &= \frac{1}{(2\pi\hbar)^3}\int d\mb{p}''
@@ -487,7 +495,7 @@ We can perform similar calculations with this form. For example
 
 $$
 \begin{align}
-\int d\mb{r} \rho_W(\mb{r}, \mb{p}) &= \int\int \frac{d\mb{r}d\mb{p}'}{(2\pi\hbar)^3}
+\int d\mb{r} \rho_W(\mb{r}, \mb{p}) &= \iint \frac{d\mb{r}d\mb{p}'}{(2\pi\hbar)^3}
     e^{-i\mb{p}'\cdot\mb{r}/\hbar}
     \mel{\mb{p} - \frac{\mb{p}'}{2}}{\rho}{\mb{p} + \frac{\mb{p}'}{2}} \\
     &= \int d\mb{p}' \delta(\mb{p}')
@@ -501,12 +509,172 @@ representation. Similarly, the normalization condition is
 
 $$
 \begin{align}
-\int \int \frac{d\mb{r}d\mb{p}}{(2\pi\hbar)^3}\rho_W(\mb{r}, \mb{p})
+\iint \frac{d\mb{r}d\mb{p}}{(2\pi\hbar)^3}\rho_W(\mb{r}, \mb{p})
     &= \int \frac{d\mb{p}}{(2\pi\hbar)^3} \rho(\mb{p},\mb{p}) = 1.
 \end{align}
 $$
 
-TBD: equations of motion for $\rho_W$
+Let us now calculate the expectation value of an operator $A$. We first note
+that \eqref{eq:wdf-def-r} can be viewed as a Fourier transform, and so the
+inverse transform is just
+
+$$
+\begin{align}
+\mel{\mb{r}-\frac{\mb{r}'}{2}}{\rho}{\mb{r}+\frac{\mb{r}'}{2}} = \frac{1}{(2\pi\hbar)^3}\int d\mb{p} e^{-i\mb{p}\cdot\mb{r}'/\hbar}\rho_W(\mb{r}, \mb{p}).
+\end{align}
+$$
+
+Using \eqref{eq:a-ev-rho-r}, we have
+
+$$
+\begin{align*}
+\ev{A} &= \iint d\mb{x} d\mb{x}' \mel{\mb{x}'}{\rho}{\mb{x}} \mel{\mb{x}}{A}{\mb{x}'} \\
+    &=\frac{1}{(2\pi\hbar)^3}\iiint d\mb{x} d\mb{x}' d\mb{p} e^{-i\mb{p}\cdot\mb{r}'/\hbar} \rho_W(\mb{r}, \mb{p}) \mel{\mb{x}}{A}{\mb{x}'} \\
+    &=\frac{1}{(2\pi\hbar)^3}\iiint d\mb{x} d\mb{x}' d\mb{p} e^{-i\mb{p}\cdot(\mb{x} - \mb{x}')/\hbar} \rho_W\qty(\frac{\mb{x} + \mb{x}'}{2}, \mb{p}) \mel{\mb{x}}{A}{\mb{x}'},
+\end{align*}
+$$
+
+where $\mb{x}' = \mb{r} - \frac{\mb{r}'}{2}$,
+$\mb{x} = \mb{r} + \frac{\mb{r}'}{2}$, and we have used the inverse Fourier
+transform for the density matrix in position representation.
+
+Now let us introduce a new variable $\mb{r}' = \mb{x}' - \mb{x}$. Keeping
+$\mb{x}'$ fixed, we can change the integration variable from $\mb{x}$
+to $\mb{r}'$ to obtain
+
+$$
+\begin{align*}
+\ev{A} &=\frac{1}{(2\pi\hbar)^3}\iiint d\mb{r}' d\mb{x}' d\mb{p} e^{i\mb{p}\cdot\mb{r}'/\hbar} \rho_W\qty(\mb{x}'-\frac{\mb{r}'}{2}, \mb{p}) \mel{\mb{x}' - \mb{r}'}{A}{\mb{x}'}.
+\end{align*}
+$$
+
+Again, introducing a new variable $\mb{r} = \mb{x}' - \frac{\mb{r}'}{2}$ and change
+the integration variable from $\mb{x}'$ to $\mb{r}$, we have
+
+$$
+\begin{align*}
+\ev{A} &=\frac{1}{(2\pi\hbar)^3}\iiint d\mb{r}' d\mb{r} d\mb{p} e^{i\mb{p}\cdot\mb{r}'/\hbar} \rho_W\qty(\mb{r}, \mb{p}) \mel{\mb{r} - \frac{\mb{r}'}{2}}{A}{\mb{r} + \frac{\mb{r}'}{2}}.
+\end{align*}
+$$
+
+We can now use the definition of the Wigner representation to rewrite the
+above as
+
+$$
+\begin{align}
+\boxed{
+\ev{A} =\iint \frac{d\mb{r} d\mb{p}}{(2\pi\hbar)^3} \rho_W\qty(\mb{r}, \mb{p}) A_W(\mb{r}, \mb{p}).
+}
+\end{align}
+$$
+
+The Wigner distribution function thus allows us to make the following
+connection between quantum mechanics and classical mechanics:
+
+$$
+A\lra A_W(\mb{r}, \mb{p}),
+$$
+
+$$
+\rho\lra \rho_W(\mb{r}, \mb{p}),
+$$
+
+and,
+
+$$
+\tr(\cdot)\lra \int\frac{d\mb{r}d\mb{p}}{(2\pi\hbar)^3}(\cdot).
+$$
+
+It is important to note that, even though the Wigner distribution function
+can be viewed as the quantum mechanical version of the classical probability
+density function, it is ***not*** a true probability density as it can take
+negative values.
+
+Let us now derive the time evolution of the Wigner distribution function. For
+simplicity we will consider a one-dimensional hamiltonian
+
+$$
+\ham = \frac{p^2}{2m} + U(x).
+$$
+
+Generalizing to higher dimensions is straight forward. Form the time evolution
+of the density operator \eqref{eq:do-te}, we have
+
+$$
+\begin{align*}
+i\hbar\pdv{\mel{x'}{\rho}{x}}{t} &= \mel{x'}{\frac{p^2}{2m}\rho}{x} + \mel{x'}{U\rho}{x}
+    -\mel{x'}{\rho\frac{p^2}{2m}}{x} + \mel{x'}{\rho U}{x} \\
+    &=\qty[-\frac{\hbar^2}{2m}\qty(\pdv[2]{x'} -\pdv[2]{x}) + U(x') - U(x)]\mel{x'}{\rho}{x}
+\end{align*}
+$$
+
+Now let $x' = y - \frac{y'}{2}$ and $x = y + \frac{y'}{2}$, or
+$y = \frac{x + x'}{2}$ and $y' = x - x'$. Changing variables from $(x, x')$ to
+$(y, y')$, the right hand side becomes
+
+$$
+\begin{align*}
+&\qty{-\frac{\hbar^2}{2m}\qty[\qty(\frac{1}{2}\pdv{y} - \pdv{y'})^2 -\qty(\frac{1}{2}\pdv{y} + \pdv{y'})^2]
+    + U\qty(y - \frac{y'}{2}) - U\qty(y + \frac{y'}{2})}\mel{y - \frac{y'}{2}}{\rho}{y + \frac{y'}{2}} \\
+    &=\qty[\frac{\hbar^2}{m}\pdv{}{y}{y'}
+    + U\qty(y - \frac{y'}{2}) - U\qty(y + \frac{y'}{2})]\mel{y - \frac{y'}{2}}{\rho}{y + \frac{y'}{2}}.
+\end{align*}
+$$
+
+On taking the Fourier transform, the first term can be evaluated through
+integration by part
+
+$$
+\begin{align*}
+\frac{\hbar^2}{m}\int dy' e^{ipy'/\hbar}\pdv{}{y}{y'}\mel{y - \frac{y'}{2}}{\rho}{y + \frac{y'}{2}}
+    &=-\frac{\hbar^2}{m}\frac{ip}{\hbar}\pdv{}{y}\int dy'e^{ipy'/\hbar}\mel{y - \frac{y'}{2}}{\rho}{y + \frac{y'}{2}} \\
+    &=-\frac{i\hbar p}{m}\pdv{y}\rho_W(y, p).
+\end{align*}
+$$
+
+The terms with $U$ can be evaluated by noting the following relation:
+
+$$
+e^{ipy'/\hbar}U\qty(y \pm \frac{y'}{2})\mel{y - \frac{y'}{2}}{\rho}{y + \frac{y'}{2}}
+    =U\qty(y \pm \frac{\hbar}{2i}\pdv{p})e^{ipy'/\hbar}\mel{y - \frac{y'}{2}}{\rho}{y + \frac{y'}{2}},
+$$
+
+which can be verified by expanding $U$ using power series.
+
+Combining all terms and writing $y$ as $x$, we have
+
+$$
+\begin{align}
+\pdv{\rho_W}{t} = -\frac{p}{m}\pdv{\rho_W}{x}
+    + \frac{1}{i\hbar}\qty[U\qty(x - \frac{\hbar}{2i}\pdv{p}) - U\qty(x + \frac{\hbar}{2i}\pdv{p})]\rho_W.
+\end{align}
+$$
+
+This is the equation of motion for the Wigner distribution function. In the
+limit of $\hbar\ra 0$, we can expand the potential terms to obtain
+
+$$
+\begin{align*}
+\pdv{\rho_W}{t} &= -\frac{p}{m}\pdv{\rho_W}{x}
+    + \pdv{U}{x}\pdv{\rho_W}{p} \\
+    &= \pdv{\ham}{x}\pdv{\rho_W}{p} - \pdv{\ham}{p}\pdv{\rho_W}{x} \\
+    &= \qty{\ham, \rho_W},
+\end{align*}
+$$
+
+or
+
+$$
+\begin{align}
+\boxed{
+\pdv{\rho_W}{t} + \qty{\rho_W, \ham} = 0.
+}
+\end{align}
+$$
+
+It is important to note that this equation is only valid in the classical
+limit. In classical limit, the Wigner distribution function evolves as
+the classical probability density function.
 
 ## Density Operator in Quantum Statistical Mechanics
 Having seen the correspondence of density operator in classical statistical
@@ -740,9 +908,9 @@ $$
 \end{align}
 $$
 
-At very high temperature $\beta \rightarrow 0$, the density matrix
+At very high temperature $\beta \ra 0$, the density matrix
 \eqref{eq:rho-canon} becomes a constant, and we again have the maximally
-random ensemble. For zero temperature $\beta \rightarrow \infty$, only
+random ensemble. For zero temperature $\beta \ra \infty$, only
 the ground state is occupied, and the ensemble is in a pure state.
 
 It should be now clear that the constant $k_B$, called the ***Boltzmann
@@ -825,13 +993,13 @@ Below are a couple examples using partial trace to obtain the reduced density
 operators of the subsystems.
 
 **Example.** A simple product state
-$\ket{\psi}= \ket{\uparrow}\otimes\ket{\downarrow} = \ket{\uparrow\downarrow}$ of a
+$\ket{\psi}= \ket{\ua}\otimes\ket{\da} = \ket{\ua\da}$ of a
 composite system with two qubits.
 
 The density operator is
 
 $$
-\rho_{AB} = \dyad{\uparrow\downarrow}.
+\rho_{AB} = \dyad{\ua\da}.
 $$
 
 Tracing over the second subsystem $B$ to obtain the reduced density operator
@@ -839,8 +1007,8 @@ of subsystem $A$:
 
 $$
 \begin{align*}
-\rho_{A} &= \tr_B\qty(\dyad{\uparrow\downarrow}) = \dyad{\uparrow}\tr\qty(\dyad{\downarrow}) \\
-    &= \dyad{\uparrow}.
+\rho_{A} &= \tr_B\qty(\dyad{\ua\da}) = \dyad{\ua}\tr\qty(\dyad{\da}) \\
+    &= \dyad{\ua}.
 \end{align*}
 $$
 
@@ -848,8 +1016,8 @@ Similarly, for subsystem $\rho_B$, we have
 
 $$
 \begin{align*}
-\rho_{B} &= \tr_A\qty(\dyad{\uparrow\downarrow}) = \tr\qty(\dyad{\uparrow})\dyad{\downarrow} \\
-    &= \dyad{\downarrow}.
+\rho_{B} &= \tr_A\qty(\dyad{\ua\da}) = \tr\qty(\dyad{\ua})\dyad{\da} \\
+    &= \dyad{\da}.
 \end{align*}
 $$
 
@@ -909,23 +1077,24 @@ the reduced desity matrix of the zeroth subsystem ($\rho_A$ in our case).
 
 Notice that the composite system is a pure state. After performing partial
 trace, each of the two subsystems is also in a pure state.
+<span style="float:right;">$\blacksquare$</span>
 
 **Example.** An entangled state
 
 $$
-\ket{\psi} = \frac{1}{\sqrt{2}} \qty(\ket{\uparrow} \otimes \ket{\downarrow}
-    + \ket{\downarrow} \otimes \ket{\uparrow})
-    = \frac{1}{\sqrt{2}} \qty(\ket{\uparrow\downarrow} + \ket{\downarrow\uparrow}).
+\ket{\psi} = \frac{1}{\sqrt{2}} \qty(\ket{\ua} \otimes \ket{\da}
+    + \ket{\da} \otimes \ket{\ua})
+    = \frac{1}{\sqrt{2}} \qty(\ket{\ua\da} + \ket{\da\ua}).
 $$
 
 The density operator of the system is
 
 $$
 \begin{align*}
-\rho_{AB} &= \frac{1}{2}\qty(\ket{\uparrow\downarrow} + \ket{\downarrow\uparrow})
-    \qty(\bra{\uparrow\downarrow} + \bra{\downarrow\uparrow}) \\
-    &= \frac{1}{2}\qty(\dyad{\uparrow\downarrow} + \dyad{\uparrow\downarrow}{\downarrow\uparrow}
-    + \dyad{\downarrow\uparrow}{\uparrow\downarrow} + \dyad{\downarrow\uparrow}).
+\rho_{AB} &= \frac{1}{2}\qty(\ket{\ua\da} + \ket{\da\ua})
+    \qty(\bra{\ua\da} + \bra{\da\ua}) \\
+    &= \frac{1}{2}\qty(\dyad{\ua\da} + \dyad{\ua\da}{\da\ua}
+    + \dyad{\da\ua}{\ua\da} + \dyad{\da\ua}).
 \end{align*}
 $$
 
@@ -935,11 +1104,11 @@ The reduced density operator for subsystem $A$ is
 
 $$
 \begin{align*}
-\rho_{A} &= \frac{1}{2}\tr_B\qty(\dyad{\uparrow\downarrow} + \dyad{\uparrow\downarrow}{\downarrow\uparrow}
-    + \dyad{\downarrow\uparrow}{\uparrow\downarrow} + \dyad{\downarrow\uparrow}). \\
-    &= \frac{1}{2}\qty[\dyad{\uparrow}\tr(\dyad{\downarrow}) + \dyad{\uparrow}{\downarrow}\tr(\dyad{\downarrow}{\uparrow})
-    + \dyad{\downarrow}{\uparrow}\tr(\dyad{\uparrow}{\downarrow}) + \dyad{\downarrow}\tr(\dyad{\uparrow})]. \\
-    &=\frac{1}{2}\qty(\dyad{\uparrow} + \dyad{\downarrow}).
+\rho_{A} &= \frac{1}{2}\tr_B\qty(\dyad{\ua\da} + \dyad{\ua\da}{\da\ua}
+    + \dyad{\da\ua}{\ua\da} + \dyad{\da\ua}). \\
+    &= \frac{1}{2}\qty[\dyad{\ua}\tr(\dyad{\da}) + \dyad{\ua}{\da}\tr(\dyad{\da}{\ua})
+    + \dyad{\da}{\ua}\tr(\dyad{\ua}{\da}) + \dyad{\da}\tr(\dyad{\ua})]. \\
+    &=\frac{1}{2}\qty(\dyad{\ua} + \dyad{\da}).
 \end{align*}
 $$
 
@@ -978,6 +1147,7 @@ Qobj data =
 
 The reduced density operators show that the subsystems are in mixed states
 even though the composite system is a pure state.
+<span style="float:right;">$\blacksquare$</span>
 
 From the above discussion, we can see that in general, a pure state in a composite
 system is not necessarily decomposable into a simple product of states of
@@ -1018,9 +1188,9 @@ calculated through
 
 $$
 \begin{align}
-\ev{A} &= \tr\qty(\rho_L A) = \int\int d\mb{q}' d\mb{r}' \ev{\rho_L A}{\mb{q}',\mb{r}'} \notag \\
-    &= \int\int\int\int d\mb{q}' d\mb{r}' d\mb{q} d\mb{r} \mel{\mb{q}',\mb{r}'}{\rho_L}{\mb{q},\mb{r}} \mel{\mb{q},\mb{r}}{A}{\mb{q}',\mb{r}'} \label{eq:ev-a-full}\\
-    &= \int\int\int\int d\mb{q}' d\mb{r}' d\mb{q} d\mb{r} \rho_L(\mb{q}',\mb{r}',\mb{q},\mb{r}) A(\mb{q},\mb{r},\mb{q}',\mb{r}'). \notag
+\ev{A} &= \tr\qty(\rho_L A) = \iint d\mb{q}' d\mb{r}' \ev{\rho_L A}{\mb{q}',\mb{r}'} \notag \\
+    &= \iiiint d\mb{q}' d\mb{r}' d\mb{q} d\mb{r} \mel{\mb{q}',\mb{r}'}{\rho_L}{\mb{q},\mb{r}} \mel{\mb{q},\mb{r}}{A}{\mb{q}',\mb{r}'} \label{eq:ev-a-full}\\
+    &= \iiiint d\mb{q}' d\mb{r}' d\mb{q} d\mb{r} \rho_L(\mb{q}',\mb{r}',\mb{q},\mb{r}) A(\mb{q},\mb{r},\mb{q}',\mb{r}'). \notag
 \end{align}
 $$
 
@@ -1029,8 +1199,8 @@ is an observable only for our smaller system, from \eqref{eq:ev-a-full} we find
 
 $$
 \begin{align*}
-\ev{A} &= \int\int\int\int d\mb{q}' d\mb{r}' d\mb{q} d\mb{r} \mel{\mb{q}',\mb{r}'}{\rho_L}{\mb{q},\mb{r}} \mel{\mb{r}}{A}{\mb{r}'}\delta(\mb{q}-\mb{q}') \\
-    &= \int\int\int d\mb{r}' d\mb{q} d\mb{r} \mel{\mb{q},\mb{r}'}{\rho_L}{\mb{q},\mb{r}} \mel{\mb{r}}{A}{\mb{r}'}, \\
+\ev{A} &= \iiiint d\mb{q}' d\mb{r}' d\mb{q} d\mb{r} \mel{\mb{q}',\mb{r}'}{\rho_L}{\mb{q},\mb{r}} \mel{\mb{r}}{A}{\mb{r}'}\delta(\mb{q}-\mb{q}') \\
+    &= \iiint d\mb{r}' d\mb{q} d\mb{r} \mel{\mb{q},\mb{r}'}{\rho_L}{\mb{q},\mb{r}} \mel{\mb{r}}{A}{\mb{r}'}, \\
 \end{align*}
 $$
 
@@ -1053,8 +1223,8 @@ The expectation value of an observable of our system is simply
 
 $$
 \begin{align}
-\ev{A} &= \int\int d\mb{r}' d\mb{r} \mel{\mb{r}'}{\rho}{\mb{r}} \mel{\mb{r}}{A}{\mb{r}'}, \notag \\
-    &= \int\int d\mb{r}' d\mb{r} \rho(\mb{r}', \mb{r}) A(\mb{r}, \mb{r}'). \\
+\ev{A} &= \iint d\mb{r}' d\mb{r} \mel{\mb{r}'}{\rho}{\mb{r}} \mel{\mb{r}}{A}{\mb{r}'}, \notag \\
+    &= \iint d\mb{r}' d\mb{r} \rho(\mb{r}', \mb{r}) A(\mb{r}, \mb{r}'). \\
 \end{align}
 $$
 

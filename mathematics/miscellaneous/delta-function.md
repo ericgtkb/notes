@@ -66,7 +66,7 @@ Thus the Kronecker delta is related the the Dirac Delta function through
 
 $$
 \begin{align}
-\delta(x-x')=\lim_{a\rightarrow 0}\frac{\delta_{nn'}}{a}.
+\delta(x-x')=\lim_{a\ra 0}\frac{\delta_{nn'}}{a}.
 \end{align}
 $$
 
@@ -99,7 +99,7 @@ Thus, we find
 
 $$
 \begin{align}
-\delta(k-k')=\lim_{L\rightarrow \infty}\frac{\delta_{mm'}L}{2\pi}.
+\delta(k-k')=\lim_{L\ra \infty}\frac{\delta_{mm'}L}{2\pi}.
 \end{align}
 $$
 
@@ -107,7 +107,7 @@ These relations can be easily generalized to three dimensions. For the position 
 
 $$
 \begin{align}
-\delta(\mb{r}-\mb{r}')=\lim_{V_c\rightarrow 0}\frac{\delta_{\mb{r}\mb{r}'}}{V_c},
+\delta(\mb{r}-\mb{r}')=\lim_{V_c\ra 0}\frac{\delta_{\mb{r}\mb{r}'}}{V_c},
 \end{align}
 $$
 
@@ -115,7 +115,7 @@ and for momentum delta functions
 
 $$
 \begin{align}
-\delta(\mb{k}-\mb{k}')=\lim_{V\rightarrow \infty}\frac{\delta_{\mb{k}\mb{k}'}V}{(2\pi)^3},
+\delta(\mb{k}-\mb{k}')=\lim_{V\ra \infty}\frac{\delta_{\mb{k}\mb{k}'}V}{(2\pi)^3},
 \end{align}
 $$
 
@@ -123,7 +123,7 @@ where $V_c$ is the unit cell volume in real space, or the volume occupied by one
 
 $$
 \begin{align}
-\delta(\mb{k}-\mb{k}')=\lim_{N\rightarrow \infty}\frac{\delta_{\mb{k}\mb{k}'}N}{\Omega_c}.
+\delta(\mb{k}-\mb{k}')=\lim_{N\ra \infty}\frac{\delta_{\mb{k}\mb{k}'}N}{\Omega_c}.
 \end{align}
 $$
 
@@ -131,13 +131,13 @@ We note that $\Omega_c/N$ is the reciprocal space volume occupied by one $k$-poi
 
 $$
 \begin{align}
-\delta(\mb{r}-\mb{r}')=\lim_{\Delta x,\Delta y,\Delta z\rightarrow 0}\frac{\delta_{\mb{r}\mb{r}'}}{\Delta x \Delta y \Delta z},
+\delta(\mb{r}-\mb{r}')=\lim_{\Delta x,\Delta y,\Delta z\ra 0}\frac{\delta_{\mb{r}\mb{r}'}}{\Delta x \Delta y \Delta z},
 \end{align}
 $$
 
 $$
 \begin{align}
-\delta(\mb{k}-\mb{k}')=\lim_{\Delta k_x,\Delta k_y,\Delta k_z\rightarrow 0}\frac{\delta_{\mb{k}\mb{k}'}}{\Delta k_x \Delta k_y \Delta k_z}.
+\delta(\mb{k}-\mb{k}')=\lim_{\Delta k_x,\Delta k_y,\Delta k_z\ra 0}\frac{\delta_{\mb{k}\mb{k}'}}{\Delta k_x \Delta k_y \Delta k_z}.
 \end{align}
 $$
 

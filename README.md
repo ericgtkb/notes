@@ -1,6 +1,6 @@
 # Eric Chen's Notes
 
-The source code of my Notes site.
+Source code of my notes site.
 
 ## Project Setup
 This project uses the [Just the Docs](https://github.com/just-the-docs/just-the-docs)

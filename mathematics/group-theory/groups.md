@@ -177,7 +177,7 @@ A^p = A^{(p + n)} = A^p A^n.
 $$
 
 Comparing the two sides of the equation we find $A^n = E$.
-<p style="text-align:right;">$\Box$</p>
+<span style="float:right;">$\square$</span>
 </details>
 
 **Definition.** *The order of an element is the smallest $n$ statisfying
@@ -218,7 +218,7 @@ the existence of $G$.
 We can write $G = A_i A_j = A_i A_k$, where $A_j \neq A_k$. By multiplying on the
 left by $A_i^{-1}$ we find $A_j = A_k$, which contradicts our initial assumption.
 Thus, $G$ must appear only once.
-<p style="text-align:right;">$\Box$</p>
+<span style="float:right;">$\square$</span>
 </details>
 
 ---
